@@ -1,0 +1,4174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Bilal Shehzad | Web Developer & Digital Creative</title>
+
+  <meta
+    name="description"
+    content="Bilal Shehzad is a student and digital creative specializing in website development, graphic design, landing page design, AI-generated ad creatives and Meta Ads."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="[YOUR CANONICAL URL]"
+  >
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Bilal Shehzad | Web Developer & Digital Creative"
+  >
+
+  <meta
+    property="og:description"
+    content="Bilal Shehzad is a student and digital creative specializing in website development, graphic design, landing page design, AI-generated ad creatives and Meta Ads."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="[YOUR WEBSITE URL]"
+  >
+
+  <meta
+    property="og:image"
+    content="[YOUR OG IMAGE]"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Bilal Shehzad | Web Developer & Digital Creative"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Bilal Shehzad is a student and digital creative specializing in website development, graphic design, landing page design, AI-generated ad creatives and Meta Ads."
+  >
+
+  <meta
+    name="theme-color"
+    content="#050914"
+  >
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #050914;
+      color: #f5f7ff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ::selection {
+      background: rgba(72, 211, 255, 0.25);
+      color: #ffffff;
+    }
+
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --bg: #050914;
+      --bg-soft: #080d1c;
+      --surface: rgba(12, 20, 38, 0.65);
+      --surface-strong: rgba(13, 23, 44, 0.85);
+
+      --border: rgba(150, 180, 220, 0.14);
+      --border-hover: rgba(79, 214, 255, 0.42);
+
+      --text: #f7f9ff;
+      --text-soft: #b4bfd3;
+      --text-muted: #77839b;
+
+      --blue: #3e9fff;
+      --cyan: #50e7ff;
+
+      --purple: #6f57ff;
+      --indigo: #4337a9;
+
+      --shadow:
+        0 30px 80px rgba(0, 0, 0, 0.38);
+
+      --container: 1180px;
+      --radius: 24px;
+    }
+
+
+    /* =========================================================
+       BACKGROUND ATMOSPHERE
+    ========================================================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -5;
+      pointer-events: none;
+
+      background:
+        radial-gradient(
+          circle at 5% 25%,
+          rgba(95, 70, 255, 0.15),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 92% 28%,
+          rgba(20, 208, 220, 0.13),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 50% 100%,
+          rgba(25, 67, 140, 0.08),
+          transparent 40%
+        );
+
+      filter: blur(10px);
+    }
+
+    .background-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -4;
+      pointer-events: none;
+      opacity: 0.18;
+
+      background-image:
+        linear-gradient(
+          rgba(120, 160, 220, 0.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(120, 160, 220, 0.035) 1px,
+          transparent 1px
+        );
+
+      background-size: 70px 70px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 80%
+        );
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      pointer-events: none;
+      opacity: 0.025;
+
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    }
+
+
+    /* =========================================================
+       CONTAINER
+    ========================================================= */
+
+    .container {
+      width: min(
+        calc(100% - 40px),
+        var(--container)
+      );
+
+      margin-inline: auto;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .navbar-wrap {
+      position: fixed;
+      top: 18px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .navbar {
+      width: min(
+        calc(100% - 30px),
+        1160px
+      );
+
+      margin-inline: auto;
+
+      min-height: 66px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 10px 12px 10px 20px;
+
+      border: 1px solid var(--border);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(14, 23, 43, 0.84),
+          rgba(7, 13, 27, 0.72)
+        );
+
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+
+      border-radius: 999px;
+
+      box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.28);
+
+      pointer-events: auto;
+
+      transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      border-color: rgba(107, 212, 255, 0.18);
+      background:
+        rgba(6, 12, 25, 0.9);
+    }
+
+    .logo {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-links a {
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 500;
+
+      position: relative;
+
+      transition:
+        color 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 1px;
+
+      transform: scaleX(0);
+      transform-origin: center;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--cyan)
+        );
+
+      transition:
+        transform 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 44px;
+      padding: 0 20px;
+
+      border-radius: 999px;
+
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+
+      background:
+        linear-gradient(
+          110deg,
+          #397fff,
+          #4de4ff
+        );
+
+      box-shadow:
+        0 8px 25px rgba(50, 173, 255, 0.2);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .nav-button:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 12px 35px rgba(50, 173, 255, 0.32);
+    }
+
+    .menu-button {
+      width: 44px;
+      height: 44px;
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+
+      border-radius: 50%;
+
+      color: white;
+    }
+
+    .menu-icon {
+      width: 19px;
+      height: 14px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-icon span {
+      width: 100%;
+      height: 1px;
+      background: white;
+      transition: 0.25s ease;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      padding:
+        150px 0 100px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      left: -300px;
+      top: 50px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(94, 67, 255, 0.12),
+          transparent 65%
+        );
+
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+
+      width: 600px;
+      height: 600px;
+
+      right: -260px;
+      top: 50px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(20, 209, 229, 0.11),
+          transparent 65%
+        );
+
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(400px, 0.9fr);
+
+      align-items: center;
+
+      gap: 40px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #b6c4da;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 28px;
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--cyan)
+        );
+    }
+
+    .hero h1 {
+      font-size:
+        clamp(58px, 8vw, 105px);
+
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+
+      font-weight: 800;
+
+      margin-bottom: 25px;
+
+      background:
+        linear-gradient(
+          120deg,
+          #ffffff 0%,
+          #ffffff 45%,
+          #a9efff 100%
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-title {
+      font-size:
+        clamp(18px, 2.1vw, 25px);
+
+      color: #dbe3f2;
+
+      font-weight: 600;
+
+      margin-bottom: 18px;
+    }
+
+    .hero-description {
+      max-width: 620px;
+
+      color: var(--text-soft);
+
+      font-size: 16px;
+      line-height: 1.8;
+
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 23px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .btn-primary {
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          110deg,
+          #397fff,
+          #4de4ff
+        );
+
+      box-shadow:
+        0 12px 35px rgba(54, 169, 255, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 16px 40px rgba(54, 169, 255, 0.3);
+    }
+
+    .btn-secondary {
+      color: #eaf2ff;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-hover);
+      background:
+        rgba(255, 255, 255, 0.045);
+    }
+
+
+    /* =========================================================
+       HERO 3D SCENE
+    ========================================================= */
+
+    .hero-visual {
+      min-height: 590px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .scene {
+      width: 520px;
+      height: 520px;
+
+      position: relative;
+
+      perspective: 1100px;
+
+      transform-style: preserve-3d;
+
+      animation:
+        sceneFloat 7s ease-in-out infinite;
+    }
+
+    .scene::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(63, 205, 255, 0.17),
+          transparent 65%
+        );
+
+      filter: blur(25px);
+    }
+
+    .cube {
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      width: 290px;
+      height: 290px;
+
+      transform:
+        translate(-50%, -50%)
+        rotateX(-16deg)
+        rotateY(-24deg)
+        rotateZ(4deg);
+
+      transform-style: preserve-3d;
+
+      animation:
+        cubeRotate 18s linear infinite;
+    }
+
+    .cube-face {
+      position: absolute;
+      inset: 0;
+
+      border: 1px solid
+        rgba(79, 220, 255, 0.42);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(72, 199, 255, 0.018),
+          rgba(93, 68, 255, 0.018)
+        );
+
+      box-shadow:
+        0 0 25px rgba(63, 195, 255, 0.04);
+
+      backface-visibility: visible;
+    }
+
+    .cube-face.front {
+      transform: translateZ(145px);
+    }
+
+    .cube-face.back {
+      transform: rotateY(180deg)
+        translateZ(145px);
+    }
+
+    .cube-face.right {
+      transform:
+        rotateY(90deg)
+        translateZ(145px);
+    }
+
+    .cube-face.left {
+      transform:
+        rotateY(-90deg)
+        translateZ(145px);
+    }
+
+    .cube-face.top {
+      transform:
+        rotateX(90deg)
+        translateZ(145px);
+    }
+
+    .cube-face.bottom {
+      transform:
+        rotateX(-90deg)
+        translateZ(145px);
+    }
+
+    .cube-inner {
+      position: absolute;
+
+      width: 175px;
+      height: 175px;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%)
+        rotateX(20deg)
+        rotateY(35deg)
+        rotateZ(-12deg);
+
+      border: 1px solid
+        rgba(82, 225, 255, 0.5);
+
+      transform-style: preserve-3d;
+
+      animation:
+        innerRotate 11s linear infinite reverse;
+    }
+
+    .inner-line {
+      position: absolute;
+
+      inset: 20px;
+
+      border: 1px solid
+        rgba(100, 113, 255, 0.42);
+
+      transform:
+        rotate(45deg);
+    }
+
+    .inner-line:nth-child(2) {
+      transform:
+        rotate(-45deg);
+    }
+
+    .orb {
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      width: 82px;
+      height: 82px;
+
+      transform:
+        translate(-50%, -50%);
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle at 35% 30%,
+          #d9fbff 0%,
+          #7df0ff 15%,
+          #38bfff 38%,
+          #1475df 62%,
+          #12285f 100%
+        );
+
+      box-shadow:
+        0 0 20px rgba(76, 226, 255, 0.65),
+        0 0 70px rgba(52, 179, 255, 0.35),
+        0 0 120px rgba(78, 78, 255, 0.16);
+
+      animation:
+        orbFloat 4s ease-in-out infinite;
+    }
+
+    .orb::after {
+      content: "";
+
+      position: absolute;
+      inset: -17px;
+
+      border-radius: 50%;
+
+      border: 1px solid
+        rgba(80, 221, 255, 0.24);
+
+      box-shadow:
+        0 0 25px
+        rgba(79, 214, 255, 0.18);
+    }
+
+    .orbit {
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      width: 390px;
+      height: 140px;
+
+      border: 1px solid
+        rgba(69, 212, 255, 0.18);
+
+      border-radius: 50%;
+
+      transform:
+        translate(-50%, -50%)
+        rotateX(65deg)
+        rotateZ(-15deg);
+
+      animation:
+        orbitRotate 12s linear infinite;
+    }
+
+    .orbit.two {
+      width: 320px;
+      height: 100px;
+
+      transform:
+        translate(-50%, -50%)
+        rotateX(70deg)
+        rotateY(28deg)
+        rotateZ(28deg);
+
+      animation-duration: 15s;
+      animation-direction: reverse;
+    }
+
+    .wire {
+      position: absolute;
+
+      width: 100%;
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(73, 213, 255, 0.42),
+          transparent
+        );
+
+      opacity: 0.55;
+    }
+
+    .wire.w1 {
+      top: 22%;
+      transform: rotate(26deg);
+    }
+
+    .wire.w2 {
+      top: 72%;
+      transform: rotate(-21deg);
+    }
+
+    .wire.w3 {
+      top: 47%;
+      transform: rotate(78deg);
+      opacity: 0.28;
+    }
+
+
+    /* =========================================================
+       ANIMATIONS
+    ========================================================= */
+
+    @keyframes sceneFloat {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-13px);
+      }
+    }
+
+    @keyframes cubeRotate {
+      0% {
+        transform:
+          translate(-50%, -50%)
+          rotateX(-16deg)
+          rotateY(-24deg)
+          rotateZ(4deg);
+      }
+
+      100% {
+        transform:
+          translate(-50%, -50%)
+          rotateX(344deg)
+          rotateY(336deg)
+          rotateZ(364deg);
+      }
+    }
+
+    @keyframes innerRotate {
+      0% {
+        transform:
+          translate(-50%, -50%)
+          rotateX(20deg)
+          rotateY(35deg)
+          rotateZ(-12deg);
+      }
+
+      100% {
+        transform:
+          translate(-50%, -50%)
+          rotateX(380deg)
+          rotateY(395deg)
+          rotateZ(348deg);
+      }
+    }
+
+    @keyframes orbFloat {
+      0%,
+      100% {
+        transform:
+          translate(-50%, -50%)
+          translateY(0);
+      }
+
+      50% {
+        transform:
+          translate(-50%, -50%)
+          translateY(-12px);
+      }
+    }
+
+    @keyframes orbitRotate {
+      from {
+        transform:
+          translate(-50%, -50%)
+          rotateX(65deg)
+          rotateZ(-15deg);
+      }
+
+      to {
+        transform:
+          translate(-50%, -50%)
+          rotateX(65deg)
+          rotateZ(345deg);
+      }
+    }
+
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
+
+    section {
+      position: relative;
+    }
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      color: var(--cyan);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size:
+        clamp(36px, 5vw, 62px);
+
+      line-height: 1.02;
+
+      letter-spacing: -0.055em;
+
+      margin-bottom: 18px;
+    }
+
+    .section-description {
+      color: var(--text-soft);
+
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr
+        1.2fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .about-mark {
+      width: 260px;
+      height: 260px;
+
+      display: grid;
+      place-items: center;
+
+      margin-inline: auto;
+
+      border-radius: 50%;
+
+      border: 1px solid
+        rgba(85, 216, 255, 0.25);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(52, 178, 255, 0.1),
+          rgba(92, 69, 255, 0.03) 50%,
+          transparent 70%
+        );
+
+      box-shadow:
+        inset 0 0 50px
+        rgba(65, 160, 255, 0.08),
+        0 0 80px
+        rgba(65, 160, 255, 0.06);
+    }
+
+    .about-mark-inner {
+      width: 145px;
+      height: 145px;
+
+      border: 1px solid
+        rgba(90, 222, 255, 0.38);
+
+      transform:
+        rotate(45deg);
+
+      display: grid;
+      place-items: center;
+    }
+
+    .about-mark-inner::before {
+      content: "";
+
+      width: 60px;
+      height: 60px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle at 35% 30%,
+          #c9fbff,
+          #40caff 40%,
+          #1850bc
+        );
+
+      box-shadow:
+        0 0 45px
+        rgba(65, 216, 255, 0.3);
+
+      transform:
+        rotate(-45deg);
+    }
+
+    .about-copy p {
+      color: var(--text-soft);
+
+      font-size: 16px;
+      line-height: 1.9;
+
+      margin-bottom: 25px;
+    }
+
+    .focus-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .focus-item {
+      padding: 9px 13px;
+
+      border-radius: 999px;
+
+      background:
+        rgba(255, 255, 255, 0.035);
+
+      border: 1px solid var(--border);
+
+      color: #cbd6e8;
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 15px;
+    }
+
+    .service-card {
+      min-height: 280px;
+
+      padding: 27px 23px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(17, 27, 49, 0.68),
+          rgba(8, 15, 29, 0.65)
+        );
+
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.16);
+
+      position: relative;
+      overflow: hidden;
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .service-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 120px;
+      height: 120px;
+
+      right: -70px;
+      top: -70px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(65, 207, 255, 0.1);
+
+      filter: blur(25px);
+
+      transition:
+        transform 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform:
+        translateY(-8px);
+
+      border-color:
+        var(--border-hover);
+
+      box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.27);
+    }
+
+    .service-card:hover::before {
+      transform: scale(1.5);
+    }
+
+    .service-number {
+      color: #617089;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      margin-bottom: 45px;
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      line-height: 1.25;
+
+      letter-spacing: -0.025em;
+
+      margin-bottom: 13px;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-wrap {
+      padding: 40px;
+
+      border: 1px solid var(--border);
+
+      border-radius:
+        var(--radius);
+
+      background:
+        rgba(9, 17, 32, 0.52);
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .skill {
+      padding: 12px 16px;
+
+      border-radius: 999px;
+
+      color: #d8e4f6;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      border: 1px solid var(--border);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.035),
+          rgba(65, 175, 255, 0.025)
+        );
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+
+      border-color:
+        rgba(70, 218, 255, 0.35);
+
+      background:
+        rgba(65, 194, 255, 0.055);
+    }
+
+
+    /* =========================================================
+       WORK / PROJECTS
+    ========================================================= */
+
+    .projects-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 22px;
+    }
+
+    .project-card {
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius);
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(15, 25, 46, 0.74),
+          rgba(7, 14, 28, 0.72)
+        );
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.18);
+
+      transition:
+        transform 0.4s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform:
+        translateY(-8px)
+        perspective(800px)
+        rotateX(1deg);
+
+      border-color:
+        rgba(72, 211, 255, 0.3);
+
+      box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.3);
+    }
+
+    .project-image {
+      aspect-ratio: 16 / 9;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          #0b1731,
+          #10112c
+        );
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.6s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.035);
+    }
+
+    .project-placeholder {
+      width: 100%;
+      height: 100%;
+
+      display: grid;
+      place-items: center;
+
+      color: rgba(185, 210, 240, 0.38);
+
+      font-size: 13px;
+      font-weight: 600;
+
+      letter-spacing: 0.05em;
+
+      text-transform: uppercase;
+
+      background:
+        radial-gradient(
+          circle at 30% 30%,
+          rgba(70, 102, 255, 0.17),
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 70% 70%,
+          rgba(55, 211, 255, 0.11),
+          transparent 40%
+        );
+    }
+
+    .project-info {
+      padding: 24px;
+    }
+
+    .project-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 15px;
+
+      margin-bottom: 12px;
+    }
+
+    .project-category {
+      color: var(--cyan);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+    }
+
+    .project-number {
+      color: #58667d;
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .project-info h3 {
+      font-size: 25px;
+
+      letter-spacing: -0.04em;
+
+      margin-bottom: 9px;
+    }
+
+    .project-info p {
+      color: var(--text-muted);
+
+      font-size: 13px;
+
+      line-height: 1.75;
+
+      margin-bottom: 18px;
+    }
+
+    .project-services {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-bottom: 21px;
+    }
+
+    .project-tag {
+      padding: 6px 9px;
+
+      border-radius: 999px;
+
+      color: #9caac0;
+
+      font-size: 10px;
+
+      background:
+        rgba(255, 255, 255, 0.035);
+
+      border: 1px solid
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .project-link {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: #dffaff;
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+    .project-link span {
+      color: var(--cyan);
+
+      transition:
+        transform 0.25s ease;
+    }
+
+    .project-link:hover span {
+      transform:
+        translateX(4px);
+    }
+
+
+    /* =========================================================
+       CREATIVE WORK
+    ========================================================= */
+
+    .creative-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 24px;
+
+      align-items: start;
+    }
+
+    .creative-item {
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 18px;
+
+      border: 1px solid var(--border);
+
+      background:
+        linear-gradient(
+          135deg,
+          #101a35,
+          #11132e
+        );
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+    }
+
+    .creative-item img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.5s ease;
+    }
+
+    .creative-item:hover {
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(72, 211, 255, 0.35);
+    }
+
+    .creative-item:hover img {
+      transform:
+        scale(1.045);
+    }
+
+    /* Show every Creative Work design completely — no cropping. */
+    .creative-item {
+      aspect-ratio: auto;
+      overflow: hidden;
+    }
+
+    .creative-item img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .creative-label {
+      color: #9fb0c7;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 14px 10px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .creative-placeholder {
+      width: 100%;
+      height: 100%;
+
+      display: grid;
+      place-items: center;
+
+      padding: 20px;
+
+      text-align: center;
+
+      color: #60708a;
+
+      font-size: 11px;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.85fr
+        1.15fr;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+    .contact-copy p {
+      color: var(--text-soft);
+
+      font-size: 16px;
+
+      line-height: 1.8;
+
+      margin-bottom: 35px;
+    }
+
+    .contact-details {
+      display: grid;
+
+      gap: 17px;
+    }
+
+    .contact-detail {
+      padding: 17px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .contact-detail small {
+      display: block;
+
+      color: var(--text-muted);
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      margin-bottom: 4px;
+    }
+
+    .contact-detail a,
+    .contact-detail strong {
+      color: #e8f1ff;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      word-break: break-word;
+    }
+
+    .contact-detail a:hover {
+      color: var(--cyan);
+    }
+
+    .social-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 25px;
+    }
+
+    .social-link {
+      padding: 9px 13px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 999px;
+
+      color: #aebbd0;
+
+      font-size: 11px;
+
+      transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .social-link:hover {
+      color: #ffffff;
+
+      border-color:
+        rgba(71, 216, 255, 0.35);
+    }
+
+    .contact-form {
+      padding: 30px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(15, 25, 46, 0.7),
+          rgba(7, 14, 28, 0.68)
+        );
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+
+      color: #bdc9dc;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 13px;
+
+      background:
+        rgba(3, 8, 18, 0.65);
+
+      color: white;
+
+      outline: none;
+
+      padding: 14px 15px;
+
+      transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .form-group textarea {
+      min-height: 145px;
+
+      resize: vertical;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #58667b;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color:
+        rgba(70, 213, 255, 0.55);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(70, 213, 255, 0.07);
+    }
+
+    .form-submit {
+      width: 100%;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding:
+        35px 0;
+
+      border-top:
+        1px solid var(--border);
+
+      background:
+        rgba(3, 8, 17, 0.55);
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 20px;
+    }
+
+    .footer-name {
+      font-size: 15px;
+
+      font-weight: 700;
+
+      margin-bottom: 3px;
+    }
+
+    .footer-title {
+      color: var(--text-muted);
+
+      font-size: 11px;
+    }
+
+    .footer-right {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: flex-end;
+
+      gap: 4px;
+    }
+
+    .footer-right a {
+      color: #a9b6ca;
+
+      font-size: 11px;
+    }
+
+    .footer-right a:hover {
+      color: var(--cyan);
+    }
+
+    .copyright {
+      color: #56647a;
+
+      font-size: 10px;
+    }
+
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(28px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1100px) {
+
+      .services-grid {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+      .hero-grid {
+        grid-template-columns:
+          1fr 0.8fr;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+      }
+
+      .scene {
+        transform:
+          scale(0.85);
+      }
+
+    }
+
+
+    @media (max-width: 900px) {
+
+      .nav-links,
+      .navbar > .nav-button {
+        display: none;
+      }
+
+      .menu-button {
+        display: flex;
+      }
+
+      .navbar.mobile-open {
+        border-radius: 25px;
+      }
+
+      .navbar.mobile-open .nav-links {
+        display: flex;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+        right: 0;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 19px;
+
+        border:
+          1px solid var(--border);
+
+        border-radius: 22px;
+
+        background:
+          rgba(7, 14, 28, 0.94);
+
+        backdrop-filter:
+          blur(22px);
+      }
+
+      .navbar.mobile-open .nav-links a {
+        width: 100%;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 140px;
+      }
+
+      .hero-content {
+        max-width: 800px;
+      }
+
+      .hero-visual {
+        min-height: 470px;
+      }
+
+      .scene {
+        transform:
+          scale(0.85);
+      }
+
+      .about-mark {
+        margin-bottom: 10px;
+      }
+
+      .contact-copy {
+        max-width: 700px;
+      }
+
+      .creative-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .container {
+        width:
+          min(
+            calc(100% - 28px),
+            var(--container)
+          );
+      }
+
+      .section {
+        padding:
+          85px 0;
+      }
+
+      .hero {
+        padding:
+          130px 0 70px;
+      }
+
+      .hero h1 {
+        font-size:
+          clamp(55px, 17vw, 85px);
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 390px;
+        overflow: hidden;
+      }
+
+      .scene {
+        width: 430px;
+        height: 430px;
+
+        transform:
+          scale(0.7);
+      }
+
+      .services-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-wrap {
+        padding: 23px;
+      }
+
+      .contact-form {
+        padding: 21px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .footer-right {
+        align-items: flex-start;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      .navbar {
+        width:
+          calc(100% - 20px);
+
+        top: 10px;
+      }
+
+      .logo {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding-top: 115px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        font-size:
+          58px;
+      }
+
+      .hero-title {
+        font-size: 17px;
+      }
+
+      .section-title {
+        font-size: 39px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 230px;
+      }
+
+      .service-number {
+        margin-bottom: 30px;
+      }
+
+      .scene {
+        width: 390px;
+        height: 390px;
+
+        transform:
+          scale(0.62);
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+    }
+
+
+
+    /* =========================================================
+       THEME OVERRIDE — supplied theme palette only
+       Existing content/layout/functionality intentionally preserved.
+    ========================================================= */
+    :root {
+      --theme-bg: #03060b;
+      --theme-surface: rgba(15, 18, 43, 0.72);
+      --theme-surface-2: rgba(9, 14, 22, 0.72);
+      --theme-border: rgba(255,255,255,0.08);
+      --theme-text: #f4f7ff;
+      --theme-muted: #929eaf;
+      --theme-blue: #6673ff;
+      --theme-cyan: #25d9ed;
+    }
+
+    body {
+      background: #03060b;
+      color: #f4f7ff;
+    }
+
+    body::before {
+      background:
+        radial-gradient(circle at 8% 8%, rgba(85,67,210,0.42), transparent 30%),
+        radial-gradient(circle at 93% 17%, rgba(0,210,225,0.22), transparent 32%),
+        radial-gradient(circle at 70% 85%, rgba(15,92,115,0.12), transparent 30%),
+        #03060b;
+      filter: none;
+    }
+
+    .background-grid {
+      opacity: 1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, black, rgba(0,0,0,0.8), transparent 92%);
+    }
+
+    .navbar {
+      background: rgba(15,18,43,0.72);
+      border-color: rgba(255,255,255,0.08);
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.04);
+    }
+
+    .logo span { color: #aeb8ca; }
+    .nav-links a { color: #a9b3c5; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a::after { background: linear-gradient(90deg,#6670ff,#25d9ed); }
+
+    .nav-button, .btn-primary {
+      color: #061018;
+      background: linear-gradient(100deg,#6673ff,#25d9ed);
+      box-shadow: 0 12px 35px rgba(42,183,255,0.22);
+    }
+
+    .nav-button:hover, .btn-primary:hover {
+      box-shadow: 0 16px 45px rgba(42,183,255,0.42);
+    }
+
+    .btn-secondary {
+      color: #dbe1eb;
+      background: rgba(255,255,255,0.025);
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(44,215,237,0.45);
+      background: rgba(44,215,237,0.06);
+    }
+
+    .eyebrow, .section-description, .hero-description, .contact-copy, .contact-detail, .project-services, .service-card p, .about-copy p {
+      color: #929eaf;
+    }
+
+    .eyebrow-dot, .section-label, .hero-role, .service-number, .project-number {
+      color: #28d8eb;
+    }
+
+    .eyebrow-dot {
+      background: #28d8eb;
+      box-shadow: 0 0 7px #28d8eb, 0 0 18px rgba(40,216,235,0.8);
+    }
+
+    .hero-title span, .hero h1 span {
+      background: linear-gradient(100deg,#fff 25%,#b9f8ff 65%,#34d9ec);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .glass-card, .service-card, .project-card, .contact-box {
+      border-color: rgba(255,255,255,0.08);
+    }
+
+    .glass-card {
+      background: linear-gradient(145deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015));
+    }
+
+    .service-card {
+      background: rgba(9,14,22,0.72);
+    }
+
+    .project-card {
+      background: radial-gradient(circle at 80% 20%,rgba(35,214,237,0.12),transparent 35%), #080d14;
+    }
+
+    .project-card:hover, .glass-card:hover, .service-card:hover {
+      border-color: rgba(45,216,237,0.3);
+    }
+
+    .project-card:hover { box-shadow: 0 25px 60px rgba(0,0,0,0.35); }
+
+    .project-image {
+      border-color: rgba(255,255,255,0.08);
+    }
+
+    .contact-box {
+      background: radial-gradient(circle at center,rgba(37,210,236,0.09),transparent 60%);
+    }
+
+    footer {
+      color: #687386;
+      border-top-color: rgba(255,255,255,0.06);
+    }
+
+    .menu-button {
+      border-color: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .cube, .cube-face, .wire, .inner-line, .orbit {
+      border-color: rgba(41,210,239,0.8);
+    }
+
+    .orb {
+      background: radial-gradient(circle at 35% 30%,#d9ffff 0%,#69eaff 20%,#1ba9ec 48%,#2672e5 78%,#2257ba 100%);
+      box-shadow: 0 0 15px rgba(43,218,255,0.9),0 0 40px rgba(28,183,255,0.65),0 0 90px rgba(28,154,255,0.3);
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div class="background-grid"></div>
+  <div class="noise"></div>
+
+
+  <!-- =======================================================
+       NAVBAR
+  ======================================================== -->
+
+  <div class="navbar-wrap">
+
+    <nav class="navbar" id="navbar">
+
+      <a href="#home" class="logo">
+        Bilal<span>.Shehzad</span>
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#work">Work</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+      <a
+        href="#contact"
+        class="nav-button"
+      >
+        Let's Talk
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+
+        <span class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+
+      </button>
+
+    </nav>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main>
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            Student · Digital Creative
+          </div>
+
+          <h1>
+            Bilal Shehzad
+          </h1>
+
+          <div class="hero-title">
+            17-year-old student &amp; digitly creative
+          </div>
+
+          <p class="hero-description">
+            Hi, I'm Bilal — a 17-year-old student and
+            digital creative passionate about building
+            modern websites, landing pages, and engaging
+            visual content for businesses and brands.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="#work"
+              class="btn btn-primary"
+            >
+              Explore My Work
+            </a>
+
+            <a
+              href="#contact"
+              class="btn btn-secondary"
+            >
+              Let's Work Together
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             3D HERO VISUAL
+        ================================================== -->
+
+        <div
+          class="hero-visual reveal"
+          aria-hidden="true"
+        >
+
+          <div class="scene">
+
+            <div class="wire w1"></div>
+            <div class="wire w2"></div>
+            <div class="wire w3"></div>
+
+            <div class="orbit"></div>
+            <div class="orbit two"></div>
+
+            <div class="cube">
+
+              <div class="cube-face front"></div>
+              <div class="cube-face back"></div>
+              <div class="cube-face right"></div>
+              <div class="cube-face left"></div>
+              <div class="cube-face top"></div>
+              <div class="cube-face bottom"></div>
+
+            </div>
+
+            <div class="cube-inner">
+
+              <div class="inner-line"></div>
+              <div class="inner-line"></div>
+
+            </div>
+
+            <div class="orb"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         ABOUT
+    ======================================================== -->
+
+    <section
+      class="section"
+      id="about"
+    >
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-mark reveal">
+
+            <div class="about-mark-inner"></div>
+
+          </div>
+
+          <div class="about-copy reveal">
+
+            <div class="section-label">
+              About
+            </div>
+
+            <h2 class="section-title">
+              Building digital experiences
+              with purpose.
+            </h2>
+
+            <p>
+              Hi, I'm Bilal Shehzad, a 17-year-old
+              student and digital creative passionate
+              about building modern websites, landing
+              pages, and engaging visual content for
+              businesses and brands.
+            </p>
+
+            <p>
+              My current focus includes web development,
+              graphic design, landing page design,
+              AI-generated advertising creatives and
+              Meta Ads.
+            </p>
+
+            <div class="focus-list">
+
+              <span class="focus-item">
+                Web Development
+              </span>
+
+              <span class="focus-item">
+                Graphic Design
+              </span>
+
+              <span class="focus-item">
+                Landing Page Design
+              </span>
+
+              <span class="focus-item">
+                AI-Generated Ad Creatives
+              </span>
+
+              <span class="focus-item">
+                Meta Ads
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SERVICES
+    ======================================================== -->
+
+    <section
+      class="section"
+      id="services"
+    >
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">
+            Services
+          </div>
+
+          <h2 class="section-title">
+            What I can do for you.
+          </h2>
+
+          <p class="section-description">
+            Focused digital services designed to help
+            businesses and brands build a stronger
+            online presence.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <!-- SERVICE 01 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              01
+            </div>
+
+            <h3>
+              Website Development
+            </h3>
+
+            <p>
+              Modern, responsive and professional
+              websites designed around your goals.
+            </p>
+
+          </article>
+
+
+          <!-- SERVICE 02 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              02
+            </div>
+
+            <h3>
+              Graphic Design
+            </h3>
+
+            <p>
+              Clean visual designs for brands,
+              businesses and digital platforms.
+            </p>
+
+          </article>
+
+
+          <!-- SERVICE 03 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              03
+            </div>
+
+            <h3>
+              Landing Page Design
+            </h3>
+
+            <p>
+              Focused landing pages with clear
+              layouts, messaging and calls to action.
+            </p>
+
+          </article>
+
+
+          <!-- SERVICE 04 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              04
+            </div>
+
+            <h3>
+              AI-Generated Ad Creatives
+            </h3>
+
+            <p>
+              Creative visual concepts designed
+              for modern advertising campaigns.
+            </p>
+
+          </article>
+
+
+          <!-- SERVICE 05 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              05
+            </div>
+
+            <h3>
+              Meta Ads
+            </h3>
+
+            <p>
+              Developing practical skills in Meta
+              advertising and campaign-focused creative.
+            </p>
+
+          </article>
+
+
+          <!-- SERVICE 06 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              06
+            </div>
+
+            <h3>
+              Google Business Profile Optimization
+            </h3>
+
+            <p>
+              Optimizing Google Business Profiles to
+              improve local visibility and presence.
+            </p>
+
+          </article>
+
+
+          <!-- SERVICE 07 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              07
+            </div>
+
+            <h3>
+              Basic SEO
+            </h3>
+
+            <p>
+              Basic search engine optimization to help
+              websites improve visibility in search.
+            </p>
+
+          </article>
+
+
+          <!-- SERVICE 08 -->
+
+          <article class="service-card reveal">
+
+            <div class="service-number">
+              08
+            </div>
+
+            <h3>
+              Logo Design
+            </h3>
+
+            <p>
+              Clean and memorable logo designs for
+              businesses and personal brands.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SKILLS
+    ======================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">
+            Skills
+          </div>
+
+          <h2 class="section-title">
+            Tools &amp; capabilities.
+          </h2>
+
+          <p class="section-description">
+            A growing toolkit across development,
+            design, creative generation and digital
+            marketing.
+          </p>
+
+        </div>
+
+
+        <div class="skills-wrap reveal">
+
+          <span class="skill">HTML</span>
+
+          <span class="skill">CSS</span>
+
+          <span class="skill">JavaScript</span>
+
+          <span class="skill">
+            Responsive Web Design
+          </span>
+
+          <span class="skill">
+            Landing Page Design
+          </span>
+
+          <span class="skill">
+            Graphic Design
+          </span>
+
+          <span class="skill">
+            Canva
+          </span>
+
+          <span class="skill">
+            AI Creative Generation
+          </span>
+
+          <span class="skill">
+            Social Media Marketing
+          </span>
+
+          <span class="skill">
+            Meta Ads
+          </span>
+
+          <span class="skill">
+            Basic SEO
+          </span>
+
+          <span class="skill">
+            Google Business Profile Optimization
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         WORK
+    ======================================================== -->
+
+    <section
+      class="section"
+      id="work"
+    >
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">
+            Work
+          </div>
+
+          <h2 class="section-title">
+            Selected Work
+          </h2>
+
+          <p class="section-description">
+            A collection of projects and creative work.
+            Replace the placeholders below with your
+            actual project images, logos and links.
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- =================================================
+               PROJECT 01 — CHEEZY PIZZA
+          ================================================== -->
+
+          <article class="project-card reveal">
+
+            <div class="project-image">
+
+              <!-- Replace with your real project image -->
+              <img
+                src="assets/projects/cheezy-pizza.jpg"
+                alt="Cheezy Pizza project design"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+              >
+
+              <div
+                class="project-placeholder"
+                style="display:none;"
+              >
+                Project Image
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-top">
+
+                <span class="project-category">
+                  Food Brand
+                </span>
+
+                <span class="project-number">
+                  01
+                </span>
+
+              </div>
+
+              <h3>
+                Cheezy Pizza
+              </h3>
+
+              <p>
+                Worked with Cheezy Pizza to create promotional social media content, including deal posters and marketing creatives designed to increase brand visibility and customer engagement.
+        
+              </p>
+
+              <div class="project-services">
+
+                <span class="project-tag">
+                  Graphic Design
+                </span>
+
+                <span class="project-tag">
+                  Social Media
+                </span>
+
+                <span class="project-tag">
+                  Marketing
+                </span>
+
+              </div>
+
+              <a
+                href="projects/cheezy-pizza.html"
+                class="project-link"
+              >
+                View Project
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- =================================================
+               PROJECT 02 — VIKING RESTAURANT
+          ================================================== -->
+
+          <article class="project-card reveal">
+
+            <div class="project-image">
+
+              <img
+                src="assets/projects/viking-restaurant.jpg"
+                alt="Viking Restaurant project design"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+              >
+
+              <div
+                class="project-placeholder"
+                style="display:none;"
+              >
+                Project Image
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-top">
+
+                <span class="project-category">
+                  Restaurant
+                </span>
+
+                <span class="project-number">
+                  02
+                </span>
+
+              </div>
+
+              <h3>
+                Viking Restaurant
+              </h3>
+
+              <p>
+                Worked with Viking Restaurant to develop engaging promotional content, social media creatives, and marketing ideas focused on showcasing their food, offers, and overall brand presence.
+                
+              </p>
+
+              <div class="project-services">
+
+                <span class="project-tag">
+                  Creative Design
+                </span>
+
+                <span class="project-tag">
+                  Social Media
+                </span>
+
+                <span class="project-tag">
+                  AI Creatives
+                </span>
+
+              </div>
+
+              <a
+                href="projects/viking-restaurant.html"
+                class="project-link"
+              >
+                View Project
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- =================================================
+               PROJECT 03 — CRUMB & CO.
+          ================================================== -->
+
+          <article class="project-card reveal">
+
+            <div class="project-image">
+
+              <img
+                src="assets/projects/crumb-and-co.jpg"
+                alt="Crumb and Co Bakery project design"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+              >
+
+              <div
+                class="project-placeholder"
+                style="display:none;"
+              >
+                Project Image
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-top">
+
+                <span class="project-category">
+                  Bakery
+                </span>
+
+                <span class="project-number">
+                  03
+                </span>
+
+              </div>
+
+              <h3>
+                Crumb &amp; Co. Bakery
+              </h3>
+
+              <p>
+                Created Crumb & Co. as a complete bakery brand concept, including its visual identity, branding, promotional designs, and digital presence. The project focused on building a modern, appealing, and consistent brand experience.
+              
+              </p>
+
+              <div class="project-services">
+
+                <span class="project-tag">
+                  Graphic Design
+                </span>
+
+                <span class="project-tag">
+                  Social Media
+                </span>
+
+                <span class="project-tag">
+                  Creative
+                </span>
+
+              </div>
+
+              <a
+                href="projects/crumb-and-co.html"
+                class="project-link"
+              >
+                View Project
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- =================================================
+               PROJECT 04 — SAKHA FRAGRANCE
+          ================================================== -->
+
+          <article class="project-card reveal">
+
+            <div class="project-image">
+
+              <img
+                src="assets/projects/sakha-fragrance.jpeg"
+                alt="Sakha Fragrance project design"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+              >
+
+              <div
+                class="project-placeholder"
+                style="display:none;"
+              >
+                Project Image
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-top">
+
+                <span class="project-category">
+                  Fragrance
+                </span>
+
+                <span class="project-number">
+                  04
+                </span>
+
+              </div>
+
+              <h3>
+                Sakha Fragrance
+              </h3>
+
+              <p>
+                Created Sakha Fragrance as a premium fragrance brand concept, developing its visual identity, logo, packaging direction, and promotional creatives with a modern and elegant brand aesthetic.
+                
+              </p>
+
+              <div class="project-services">
+
+                <span class="project-tag">
+                  Graphic Design
+                </span>
+
+                <span class="project-tag">
+                  Ad Creative
+                </span>
+
+                <span class="project-tag">
+                  AI Creative
+                </span>
+
+              </div>
+
+              <a
+                href="projects/sakha-fragrance.html"
+                class="project-link"
+              >
+                View Project
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- =================================================
+               PROJECT 05 — ELITE ESTATE AGENCY LANDING PAGE
+          ================================================== -->
+
+          <article class="project-card reveal">
+
+            <div class="project-image">
+
+              <img
+                src="assets/projects/elite-estate-agency.jpg"
+                alt="Elite Estate Agency landing page"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+              >
+
+              <div
+                class="project-placeholder"
+                style="display:none;"
+              >
+                Project Image
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-top">
+
+                <span class="project-category">
+                  Web Development
+                </span>
+
+                <span class="project-number">
+                  05
+                </span>
+
+              </div>
+
+              <h3>
+                Elite Estate Agency Landing Page
+              </h3>
+
+              <p>
+                Designed and developed a modern, professional landing page for Elite Estate Agency, focused on presenting property services clearly, building trust, and creating a smooth user experience for potential clients.
+              </p>
+
+              <div class="project-services">
+
+                <span class="project-tag">
+                  HTML
+                </span>
+
+                <span class="project-tag">
+                  CSS
+                </span>
+
+                <span class="project-tag">
+                  Responsive
+                </span>
+
+              </div>
+
+              <a
+                href="https://eliteestatteagency.netlify.app/"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Live Website
+                <span>↗</span>
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         CREATIVE WORK
+    ======================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">
+            Creative Work
+          </div>
+
+          <h2 class="section-title">
+            Visual ideas, made digital.
+          </h2>
+
+          <p class="section-description">
+            Social media designs, posters,
+            advertisements, AI-generated visuals,
+            Canva designs and marketing creatives.
+          </p>
+
+        </div>
+
+
+        <div class="creative-grid">
+
+          <div class="creative-item reveal">
+
+            <div class="creative-label">Creative Work 01</div>
+
+            <img
+              src="assets/creative/creative-09.jpg"
+              alt="Lala's Food creative design"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div
+              class="creative-placeholder"
+              style="display:none;"
+            >
+              Creative Work 01
+            </div>
+
+          </div>
+
+          <div class="creative-item reveal">
+
+            <div class="creative-label">Creative Work 02</div>
+
+            <img
+              src="assets/creative/creative-10.png"
+              alt="Resto restaurant creative design"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div
+              class="creative-placeholder"
+              style="display:none;"
+            >
+              Creative Work 02
+            </div>
+
+          </div>
+
+          <div class="creative-item reveal">
+
+            <div class="creative-label">Creative Work 03</div>
+
+            <img
+              src="assets/creative/creative-03.jpg"
+              alt="Bravo Bakery creative design"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div
+              class="creative-placeholder"
+              style="display:none;"
+            >
+              Creative Work 03
+            </div>
+
+          </div>
+
+          <div class="creative-item reveal">
+
+            <div class="creative-label">Creative Work 04</div>
+
+            <img
+              src="assets/creative/creative-04.jpg"
+              alt="Lessons from the Seerah creative design"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div
+              class="creative-placeholder"
+              style="display:none;"
+            >
+              Creative Work 04
+            </div>
+
+          </div>
+
+          <div class="creative-item reveal">
+
+            <div class="creative-label">Creative Work 05</div>
+
+            <img
+              src="assets/creative/creative-05.jpg"
+              alt="Bravo Bakery promotional creative design"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div
+              class="creative-placeholder"
+              style="display:none;"
+            >
+              Creative Work 05
+            </div>
+
+          </div>
+
+          <div class="creative-item reveal">
+
+            <div class="creative-label">Creative Work 06</div>
+
+            <img
+              src="assets/creative/creative-06.jpg"
+              alt="Seerat-un-Nabi creative design"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div
+              class="creative-placeholder"
+              style="display:none;"
+            >
+              Creative Work 06
+            </div>
+
+          </div>
+
+          <div class="creative-item reveal">
+
+            <div class="creative-label">Creative Work 07</div>
+
+            <img
+              src="assets/creative/creative-07.jpg"
+              alt="Hijrah to Madinah creative design"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+
+            <div
+              class="creative-placeholder"
+              style="display:none;"
+            >
+              Creative Work 07
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         CONTACT
+    ======================================================== -->
+
+    <section
+      class="section"
+      id="contact"
+    >
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+
+          <div class="contact-copy reveal">
+
+            <div class="section-label">
+              Contact
+            </div>
+
+            <h2 class="section-title">
+              Let's Work Together
+            </h2>
+
+            <p>
+              Have a project or idea in mind?
+              Get in touch and let's create something
+              professional together.
+            </p>
+
+
+            <div class="contact-details">
+
+
+              <div class="contact-detail">
+
+                <small>
+                  Phone
+                </small>
+
+                <a
+                  href="https://wa.me/923396436663" target="_blank" rel="noopener"
+                >
+                  03396436663
+                </a>
+
+              </div>
+
+
+              <div class="contact-detail">
+
+                <small>
+                  WhatsApp
+                </small>
+
+                <a
+                  href="https://wa.me/923396436663"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  +92 339 6436663
+                </a>
+
+              </div>
+
+
+              <div class="contact-detail">
+
+                <small>
+                  Email
+                </small>
+
+                <a
+                  href="mailto:bilalshehzad250@gmail.com"
+                >
+                  bilalshehzad250@gmail.com
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="social-links">
+
+              <a
+                href="https://www.instagram.com/bilalshehzad100/"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="https://www.facebook.com/Biilalshehzad/"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+              >
+                Facebook
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CONTACT FORM -->
+
+          <form
+            class="contact-form reveal"
+            id="contactForm"
+          >
+
+            <div class="form-group">
+
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary form-submit"
+            >
+              Send Message
+            </button>
+
+          </form>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+
+        <div class="footer-name">
+          Bilal Shehzad
+        </div>
+
+        <div class="footer-title">
+          Web Developer &amp; Digital Creative
+        </div>
+
+      </div>
+
+
+      <div class="footer-right">
+
+        <a
+          href="https://wa.me/923396436663" target="_blank" rel="noopener"
+        >
+          03396436663
+        </a>
+
+        <a
+          href="https://wa.me/923396436663"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp: +92 339 6436663
+        </a>
+
+        <div class="copyright">
+          © 2026 Bilal Shehzad. All rights reserved.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       STRUCTURED DATA
+  ======================================================== -->
+
+  <script type="application/ld+json">
+
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bilal Shehzad",
+    "jobTitle": "Web Developer & Digital Creative",
+    "telephone": "03396436663",
+    "url": "[YOUR WEBSITE URL]",
+    "sameAs": [
+      "https://www.instagram.com/bilalshehzad100/",
+      "https://www.facebook.com/Biilalshehzad/"
+    ],
+    "knowsAbout": [
+      "Web Development",
+      "Graphic Design",
+      "Landing Page Design",
+      "AI-Generated Ad Creatives",
+      "Meta Ads",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Web Design",
+      "Canva",
+      "Basic SEO",
+      "Google Business Profile Optimization"
+    ]
+  }
+
+  </script>
+
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* =======================================================
+       NAVBAR SCROLL EFFECT
+    ======================================================== */
+
+    const navbar =
+      document.getElementById("navbar");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 30) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+
+      },
+      { passive: true }
+    );
+
+
+    /* =======================================================
+       MOBILE MENU
+    ======================================================== */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          navbar.classList.toggle(
+            "mobile-open"
+          );
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+      }
+    );
+
+
+    /* Close menu after clicking navigation */
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(
+        (link) => {
+
+          link.addEventListener(
+            "click",
+            () => {
+
+              navbar.classList.remove(
+                "mobile-open"
+              );
+
+              menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+            }
+          );
+
+        }
+      );
+
+
+    /* =======================================================
+       REVEAL ANIMATIONS
+    ======================================================== */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+    const prefersReducedMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+
+    if (
+      prefersReducedMotion ||
+      !("IntersectionObserver" in window)
+    ) {
+
+      revealElements.forEach(
+        (element) => {
+
+          element.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    } else {
+
+      const observer =
+        new IntersectionObserver(
+          (entries, observer) => {
+
+            entries.forEach(
+              (entry) => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target.classList.add(
+                    "visible"
+                  );
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+
+      revealElements.forEach(
+        (element) => {
+
+          observer.observe(element);
+
+        }
+      );
+
+    }
+
+
+    /* =======================================================
+       ACTIVE NAVIGATION
+    ======================================================== */
+
+    const sections =
+      document.querySelectorAll(
+        "main section[id]"
+      );
+
+    const navLinks =
+      document.querySelectorAll(
+        ".nav-links a"
+      );
+
+
+    const sectionObserver =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                navLinks.forEach(
+                  (link) => {
+
+                    link.classList.remove(
+                      "active"
+                    );
+
+                    if (
+                      link.getAttribute(
+                        "href"
+                      ) ===
+                      "#" + entry.target.id
+                    ) {
+
+                      link.classList.add(
+                        "active"
+                      );
+
+                    }
+
+                  }
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          rootMargin:
+            "-35% 0px -55% 0px"
+        }
+      );
+
+
+    sections.forEach(
+      (section) => {
+
+        sectionObserver.observe(
+          section
+        );
+
+      }
+    );
+
+
+    /* =======================================================
+       CONTACT FORM
+    ======================================================== */
+
+    const contactForm =
+      document.getElementById(
+        "contactForm"
+      );
+
+
+    contactForm.addEventListener(
+      "submit",
+      (event) => {
+
+        event.preventDefault();
+
+        const name =
+          document.getElementById(
+            "name"
+          ).value.trim();
+
+        const email =
+          document.getElementById(
+            "email"
+          ).value.trim();
+
+        const message =
+          document.getElementById(
+            "message"
+          ).value.trim();
+
+
+        /*
+          This is a front-end form only.
+
+          To actually receive messages,
+          connect this form to your preferred
+          backend/form service.
+        */
+
+
+        if (
+          name &&
+          email &&
+          message
+        ) {
+
+          alert(
+            "Thank you. Your message is ready to be connected to the form backend."
+          );
+
+          contactForm.reset();
+
+        }
+
+      }
+    );
+
+
+    /* =======================================================
+       SUBTLE MOUSE PARALLAX FOR HERO 3D
+    ======================================================== */
+
+    const scene =
+      document.querySelector(".scene");
+
+
+    if (
+      scene &&
+      !prefersReducedMotion
+    ) {
+
+      let targetX = 0;
+      let targetY = 0;
+
+      let currentX = 0;
+      let currentY = 0;
+
+
+      window.addEventListener(
+        "mousemove",
+        (event) => {
+
+          const x =
+            (event.clientX /
+              window.innerWidth) -
+            0.5;
+
+          const y =
+            (event.clientY /
+              window.innerHeight) -
+            0.5;
+
+          targetX =
+            x * 8;
+
+          targetY =
+            y * 8;
+
+        },
+        { passive: true }
+      );
+
+
+      function animateParallax() {
+
+        currentX +=
+          (targetX - currentX) *
+          0.035;
+
+        currentY +=
+          (targetY - currentY) *
+          0.035;
+
+
+        scene.style.transform =
+          `translate3d(${currentX}px, ${currentY}px, 0)`;
+
+
+        requestAnimationFrame(
+          animateParallax
+        );
+
+      }
+
+
+      animateParallax();
+
+    }
+
+
+    /* =======================================================
+       IMAGE FALLBACK
+    ======================================================== */
+
+    document
+      .querySelectorAll(
+        ".project-image img, .creative-item img"
+      )
+      .forEach(
+        (image) => {
+
+          image.addEventListener(
+            "error",
+            () => {
+
+              image.style.display =
+                "none";
+
+              const fallback =
+                image.nextElementSibling;
+
+              if (fallback) {
+                fallback.style.display =
+                  "grid";
+              }
+
+            }
+          );
+
+        }
+      );
+
+  </script>
+</body>
+</html>
